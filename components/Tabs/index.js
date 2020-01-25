@@ -12,7 +12,7 @@ tabsContainer = document.querySelector('.topics')
 
 axiosPromise = axios.get('https://lambda-times-backend.herokuapp.com/topics');
 axiosPromise.then(response => {
-  console.log(response.data);
+  // console.log(response.data);
   response.data.topics.forEach(item => {
     const createTabs = Tabs(item);
     tabsContainer.appendChild(createTabs);
