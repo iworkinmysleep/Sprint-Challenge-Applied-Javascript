@@ -43,10 +43,9 @@ leftBtn.addEventListener('click', () => {
   gsap.from(showingImage, 2, {xPercent: 100})
 })
 
-rightButton.addEventListener('click', () =>{
+rightBtn.addEventListener('click', () =>{
   clicks === 0 ? clicks = 3 : clicks--;
   showingImage.src = imgSelector(clicks);
-  gsap.from(showingImage, 2, {xPercent: -100})
 })
 
 //Display the image indicated by the clicks
