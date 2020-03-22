@@ -56,6 +56,7 @@ function createCard(article) {
   newsAuthorContainer.appendChild(newsImgContainer);
   newsAuthorContainer.appendChild(newsAuthor);
   newsImgContainer.appendChild(newsImg);
+  
 
   return newsCard;
 }
