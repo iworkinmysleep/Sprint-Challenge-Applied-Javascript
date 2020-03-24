@@ -49,7 +49,7 @@ function createCard(article) {
   newsCard.classList.add('card');
   newsHeadline.classList.add('headline');
   newsAuthorContainer.classList.add('author');
-  newsAuthorContainer.classList.add('img-container');
+  newsImgContainer.classList.add('img-container');
 
   newsCard.appendChild(newsHeadline);
   newsCard.appendChild(newsAuthorContainer);

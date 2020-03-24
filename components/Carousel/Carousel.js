@@ -35,26 +35,26 @@ rightBtn.classList.add('right-button');
 leftBtn.textContent = '<';
 rightBtn.textContent = '>';
 
-//Event Listeners for clicks
+carousel.append(leftBtn, imgShow, rightBtn);
+
+//Event Listeners 
 let clicks = 0;
 leftBtn.addEventListener('click', () => {
   clicks > -1 && clicks < 3 ? clicks++ : clicks = 0;
   imgShow.src = imgSelector(clicks);
-  gsap.from(showingImage, 2, {xPercent: 100})
 })
 
-rightBtn.addEventListener('click', () =>{
+rightBtn.addEventListener('click', () => {
   clicks === 0 ? clicks = 3 : clicks--;
-  showingImage.src = imgSelector(clicks);
+  imgShow.src = imgSelector(clicks);
 })
 
-//Display the image indicated by the clicks
+//Display the image 
 imgShow.src = imgSelector(clicks);
 imgShow.style.display = 'inline-block';
-imgShow.style.zIndex = -1;
 
-//Add the images to the carousel and append the carousel
-carousel.append(leftBtn, imgShow, rightBtn);
+
+
 return carousel;
 }
 
@@ -65,7 +65,5 @@ function imgSelector(clicks){
 }
 
 
-
-//Append the appropriate content to the container
 carouselContainer.append(Carousel());
 
